@@ -1,5 +1,5 @@
 <?php
-    require_once "templates/header.php";
+    require_once "../templates/header.php";
 ?>
 <div class="container">
     <h1 id="main-title">Editar Tarefa</h1>
@@ -20,3 +20,6 @@
         </div>
     </form>
 </div>
+
+<?php
+    require_once "../templates/footer.php";

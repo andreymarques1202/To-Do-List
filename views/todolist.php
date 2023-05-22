@@ -1,5 +1,5 @@
 <?php
-    require_once "templates/header.php";
+    require_once "../templates/header.php";
 ?>
 
     <div class="container">
@@ -28,5 +28,6 @@
             </tbody>
         </table>
     </div>
-</body>
-</html>
+
+<?php
+    require_once "../templates/footer.php";

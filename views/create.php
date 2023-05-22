@@ -1,6 +1,6 @@
 <?php
 
-require_once "templates/header.php";
+require_once "../templates/header.php";
 
 ?>
 
@@ -23,3 +23,6 @@ require_once "templates/header.php";
         <button type="submit" class="btn btn-primary" id="button-create">Criar Tarefa</button>
     </form>
 </div>
+
+<?php
+    require_once "../templates/footer.php";

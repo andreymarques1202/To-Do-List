@@ -16,6 +16,6 @@ class FormController implements Controller {
             $list = $this->todolist->find($id);
         }
 
-        require_once __DIR__ . "/../../views/form.php";
+        require_once __DIR__ . "/../../views/create.php";
     }
 }
