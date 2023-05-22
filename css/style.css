@@ -88,6 +88,10 @@ body {
     max-width: 500px;
 }
 
+#button-create {
+    margin-top: 10px;
+}
+
 /* MOBILE */
 
 @media(max-width: 480px) {

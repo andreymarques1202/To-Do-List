@@ -16,8 +16,8 @@
                     <td scope="row" class="col-id"></td>
                     <td scope="row"></td>
                     <td class="actions">
-                        <a href="show.html"><i class="fas fa-eye check-icon"></i></a>
-                        <a href="edit.html"><i class="fas fa-edit edit-icon"></i></a>
+                        <a href="show.php"><i class="fas fa-eye check-icon"></i></a>
+                        <a href="edit.php"><i class="fas fa-edit edit-icon"></i></a>
                         <form action="" method="post" class="delete-form">
                             <input type="hidden" name="type" value="delete">
                             <input type="hidden" name="id" value="">
