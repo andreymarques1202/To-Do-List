@@ -9,12 +9,12 @@ class ComposerStaticInit763da8a705db918ae17cd3f2b0070518
     public static $prefixLengthsPsr4 = array (
         'T' => 
         array (
-            'Todolist\\' => 9,
+            'Todolist\\Mvc\\' => 13,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Todolist\\' => 
+        'Todolist\\Mvc\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

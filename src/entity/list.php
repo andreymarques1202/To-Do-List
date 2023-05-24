@@ -1,17 +1,17 @@
 <?php
 
-namespace Todolist\entity;
+namespace Todolist\Mvc\Entity;
 
 class Todolist {
     public readonly string $name;
-    public readonly int $id;
-    public readonly string $observations;
+    public int $id;
+    public string $observations;
 
-    public function __construct($name, $id, $observations) {
-        
+    public function __construct(string $name, public string $state) {
+
     }
 
-    public function setId($id): void {
+    public function setId(int $id): void {
         $this->id = $id;
     }
     

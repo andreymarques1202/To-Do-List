@@ -1,7 +1,7 @@
 {
     "autoload": {
         "psr-4": {
-            "Todolist\\": "src/"
+            "Todolist\\Mvc\\": "src/"
         }
     }
 }

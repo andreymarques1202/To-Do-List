@@ -9,7 +9,7 @@
     <!--FONT-AWESOME-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--CSS-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Todo-List</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">
-                <img src="./img/logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                <img src="/img/logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                 Todo-list
               </a>
             </div>

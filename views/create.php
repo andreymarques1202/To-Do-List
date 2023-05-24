@@ -6,7 +6,7 @@ require_once "../templates/header.php";
 
 <div class="container">
     <h1>Criando Tarefa</h1>
-    <form action="" id="create-form" method="POST">
+    <form action="../process.php" id="create-form" method="POST">
         <input type="hidden" name="type" value="create">
         <div class="form-group">
             <label for="name">Tarefa:</label>

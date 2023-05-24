@@ -1,8 +1,8 @@
 <?php
 
-namespace Todolist\Controller;
+namespace Todolist\Mvc\Controller;
 
-use Todolist\Repository\ListRepository;
+use Todolist\Mvc\Repository\ListRepository;
 
 class ListController {
     public function __construct(private ListRepository $todolist) {

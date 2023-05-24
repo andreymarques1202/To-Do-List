@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Todolist\\' => array($baseDir . '/src'),
+    'Todolist\\Mvc\\' => array($baseDir . '/src'),
 );

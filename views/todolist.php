@@ -29,5 +29,7 @@
         </table>
     </div>
 
+    <p id="empty-list-text"><a href="/create">Clique aqui para adicionar Tarefas</a>.</p>
+
 <?php
     require_once "../templates/footer.php";
