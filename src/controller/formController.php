@@ -1,10 +1,10 @@
 <?php
 namespace Todolist\Mvc\Controller;
-
+use Todolist\Mvc\Entity\Todolist;
 use Todolist\Mvc\Repository\ListRepository;
 
 class FormController implements Controller {
-    public function __construct(private ListRepository $todolist) {
+    public function __construct(private ListRepository $list) {
 
     }
     
@@ -13,7 +13,7 @@ class FormController implements Controller {
         $list = null;
 
         if($id !== false && $id !== null) {
-            $list = $this->todolist->find($id);
+            $list = $this->list->find($id);
         }
 
         require_once __DIR__ . "/../../views/create.php";

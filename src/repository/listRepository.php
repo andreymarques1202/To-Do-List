@@ -2,7 +2,7 @@
 
 namespace Todolist\Mvc\Repository;
 
-use Todolist\Mvc\Entity\Todolist;
+use Todolist\Mvc\Entity\TodoList;
 use PDO;
 
 class ListRepository {
@@ -10,13 +10,13 @@ class ListRepository {
         
     }
 
-    public function add(Todolist $list): bool {
-        $query = "INSERT INTO videos (name, state, observations) VALUES (:name, :state, :observations)";
+    public function add(TodoList $list): bool {
+        $query = "INSERT INTO tarefas (name, observations, state ) VALUES (:name, :observations, :state)";
 
         $stmt = $this->pdo->prepare($query);
 
         $stmt->bindValue(":name", $list->name);
-        $stmt->bindValue(":state", $list->state);
+        $stmt->bindValue(":state", $list->stateList);
         $stmt->bindValue(":observations", $list->observations);
 
         $result = $stmt->execute();
@@ -36,11 +36,11 @@ class ListRepository {
         return $stmt->execute();
     }
 
-    public function update(Todolist $list): bool {
+    public function update(TodoList $list): bool {
         $query = "UPDATE tarefas SET name = :name, state = :state, observations = :observatios WHERE id = :id";
     $stmt = $this->pdo->prepare($query);
     $stmt->bindValue(":name", $list->name);
-    $stmt->bindValue(":state", $list->state);
+    $stmt->bindValue(":state", $list->stateList);
     $stmt->bindValue(":observations", $list->observations);
     $stmt->bindValue(":id", $list->id, PDO::PARAM_INT);
 
@@ -48,7 +48,7 @@ class ListRepository {
     }
 
     public function all(): array {
-        $todoList = $this->pdo->query("SELECT * FROM tarefas;")->fetchAll(PDO::FETCH_ASSOC);
+        $todoList = $this->pdo->query("SELECT * FROM tarefas")->fetchAll(PDO::FETCH_ASSOC);
 
         return array_map(
             $this->hydrateList(...), $todoList);
@@ -62,8 +62,8 @@ class ListRepository {
         return $this->hydrateList($stmt->fetch(PDO::FETCH_ASSOC));
     }
 
-    private function hydrateList(array $listData): Todolist {
-        $list = new Todolist($listData["name"], $listData["state"], $listData["observations"]);
+    private function hydrateList(array $listData): TodoList {
+        $list = new TodoList($listData["name"], $listData["state"], $listData["observations"]);
         $list->setId($listData["id"]);
 
         return $list;
