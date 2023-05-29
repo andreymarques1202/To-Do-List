@@ -37,7 +37,7 @@ class ListRepository {
     }
 
     public function update(TodoList $list): bool {
-        $query = "UPDATE tarefas SET name = :name, state = :state, observations = :observatios WHERE id = :id";
+        $query = "UPDATE tarefas SET name = :name, state = :state, observations = :observations WHERE id = :id";
     $stmt = $this->pdo->prepare($query);
     $stmt->bindValue(":name", $list->name);
     $stmt->bindValue(":state", $list->stateList);

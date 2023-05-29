@@ -1,11 +1,10 @@
 <?php
 namespace Todolist\Mvc\Controller;
 
-use Todolist\Mvc\Entity\TodoList;
 use Todolist\Mvc\Repository\ListRepository;
 
 class DeleteListController implements Controller {
-    public function __construct(private ListRepository $list) {
+    public function __construct(private ListRepository $listRepository) {
         
     }
 
@@ -17,7 +16,7 @@ class DeleteListController implements Controller {
             return;
         }
 
-        $success = $this->list->remove($id);
+        $success = $this->listRepository->remove($id);
         if ($success === false) {
             header("Location: /?sucesso=0");
         } else {
